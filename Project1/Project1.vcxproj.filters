@@ -27,5 +27,17 @@
     <ClCompile Include="study4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="study5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="study6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="study7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="study8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

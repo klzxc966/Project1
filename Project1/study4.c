@@ -1,7 +1,7 @@
 #include <stdio.h>
 #pragma warning(disable:4996)
 
-void main()
+void main_d()
 {
 	// 과제1 : opEx4_10의 과정을 순서대로 나열. 주석을 사용하여 결과를 증명한다. 
 	int a, b, c, e, f;
@@ -16,8 +16,8 @@ void main()
 	*/ 
 	f = 10 == c ? b * ++c - 10 * 2 : c-- * b + 10 * 2;
 	/*
-	c는 10과 같다. 조건문이 참이므로 f는 b * ++c - 10 * 2 이다. c의 증감연산자는 전위형이므로 
-	c는 12가 된 후 계산한다. 5*12-10*2 = 40이다.
+	c는 10이 아니다(11) 조건문이 거짓이므로 f는 c-- *b + 10 * 2 이다. c의 증감연산자는 후위형이므로 
+	c는 11인채로 계산한다. 11*5+10*2 = 75이다.
 	*/
 
 	/* 과제2: 정수형으로 2개의 배열을 선언, 배열의 크기는 4 ( ex: int nOP1[4], nOP2[4]; )
@@ -54,7 +54,7 @@ void main()
 
 	int narr3[4] = {narr1[0]+narr2[0], narr1[1]-narr2[1], 
 					narr1[2]*narr2[2], narr1[3]/narr2[3]};
-	float farr3[4] = { (int)farr1[0] + (int)farr2[0], (int)farr1[1] - (int)farr2[1],
+	int nfarr3[4] = { (int)farr1[0] + (int)farr2[0], (int)farr1[1] - (int)farr2[1],
 					   (int)farr1[2] * (int)farr2[2], (int)farr1[3] / (int)farr2[3] };
 
 	for (int i = 0; i < 4; i++) {
@@ -62,6 +62,6 @@ void main()
 	}
 		printf("\n");
 	for (int i = 0; i < 4; i++) {
-		printf("%f\t", farr3[i]);
+		printf("%d\t", nfarr3[i]);
 	}
 }
