@@ -17,20 +17,20 @@ void main_x() {
 
 	scanf("%d%c%d", &a, &o, &b);
 	
-	int sum = 0;
+	float sum = 0.0f;
 
 	if (o == 43) {
 		sum = a + b;
 	}
-	if (o == 45) {
+	else if (o == 45) {
 		sum = a - b;
 	}
-	if (o == 42) {
+	else if (o == 42) {
 		sum = a * b;
 	}
-	if (o == 47) {
+	else if (o == 47) {
 		sum = a / b;
 	}
 
-	printf("결과는 %d 입니다", sum);
+	printf("결과는 %f 입니다", sum);
 }

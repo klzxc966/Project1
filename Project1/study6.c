@@ -17,19 +17,23 @@ void main_f() {
 
 	scanf("%d%c%d", &a, &o, &b);
 
-	int sum = 0;
+	float sum = 0.0f;
 
 	switch (o)
 	{
 		case 43 :
 			sum = a + b;
+			break;
 		case 45 : 
 			sum = a - b;
+			break;
 		case 42:
 			sum = a * b;
+			break;
 		case 47 : 
 			sum = a / b;
+			break;
 	}
 
-	printf("결과는 %d 입니다", sum);
+	printf("결과는 %f 입니다", sum);
 }

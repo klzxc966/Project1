@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h> // rand() 함수
-#include <conio.h>  // getch() 함수
 #include <time.h>   // time() 함수
 #pragma warning(disable:4996)
 
@@ -19,7 +18,7 @@
 */
 
 
-void main()
+void main_g()
 {
 	int  nRandom;
 	printf("숫자맞추기 게임을 시작합니다. ( 1 ~ 10 ) << \n");
@@ -31,33 +30,35 @@ void main()
 	//// 나머지 연산으로 1~10까지의 난수를 발생
 	nRandom = (rand() % 10) +1;
 
-	int num = 0;
-	int cnt = 0;
-	
-
-	SPoint:
-	if (cnt == 2) {
-		exit(0);
-		printf("게임종료");
-	}
+	int num = 0;	
 
 	printf("1~10 사이의 숫자를 입력히세요.");
 	scanf("%d", &num);
 	
 	if (num < nRandom) {
-		printf("업!");
-		cnt++;
-		goto SPoint;
+		printf("업!\n");
 	}
 	if (num > nRandom) {
-		printf("다운!");
-		cnt++;
-		goto SPoint;
+		printf("다운!\n");
 	}
 	if (num == nRandom) {
-		printf("정답입니다!");
-		cnt++;
+		printf("정답입니다!\n");
 		exit(0);
 	}
 
+	printf("1~10 사이의 숫자를 입력히세요.");
+	scanf("%d", &num);
+
+	if (num < nRandom) {
+		printf("업!\n");
+		printf("실패!\n");
+	}
+	if (num > nRandom) {
+		printf("다운!\n");
+		printf("실패!\n");
+	}
+	if (num == nRandom) {
+		printf("정답입니다!\n");
+		exit(0);
+	}
 }
